@@ -1,25 +1,20 @@
-import { StatusBar } from "expo-status-bar";
-import { useMemo, useState } from "react";
+import { useState } from "react";
 import {
-  StyleSheet,
-  Text,
-  View,
-  TextInput,
-  Button,
+  Alert,
   Modal,
   Pressable,
-  Alert,
+  StyleSheet,
+  Text,
+  TextInput,
+  View,
 } from "react-native";
 
 function calcularImc(altura: number, peso: number): number {
-  console.log("feijao", altura, peso);
   let IMC: number = peso / (altura * altura);
-  console.log("arroz", IMC);
   return IMC;
 }
 
 function verificarIMC(imc: number) {
-  console.log(imc);
   if (imc < 17) {
     return "Muito abaixo do peso";
   } else if (imc >= 17 && imc <= 18.49) {
@@ -162,7 +157,6 @@ const styles = StyleSheet.create({
     fontSize: 20,
   },
   modalText: {
-    // marginBottom: 15,
     textAlign: "center",
     fontSize: 25,
   },
